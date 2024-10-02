@@ -23,12 +23,12 @@ Configuración en application.properties
 spring.application.name=Animals
 spring.datasource.url=jdbc:mysql://localhost:3306/animal
 spring.datasource.username=root
-spring.datasource.password=your_password_here
+spring.datasource.password=Tarmi123*
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 
 Cómo ejecutar el proyecto
-Clonar este repositorio.
+Clonar este repositorio. https://github.com/Camilavelez18/Animals-CRUD-API.git
 Asegúrate de tener MySQL instalado y funcionando.
 Configura tu base de datos en application.properties.
 Ejecuta el proyecto desde Visual Studio Code usando Run Java.
