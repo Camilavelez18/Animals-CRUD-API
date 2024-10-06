@@ -1,0 +1,61 @@
+CREATE DATABASE education_center;
+USE education_center;
+
+CREATE TABLE recreation(
+id int auto_increment primary key,
+quantity int not null,
+name_watchman varchar(25) not null,
+food_type varchar(20) not null,
+duration int not null
+);
+
+CREATE TABLE classes(
+id int auto_increment primary key,
+duration int not null,
+manager_name varchar(30) not null
+);
+
+CREATE TABLE grades(
+id int auto_increment primary key,
+nombre varchar(35) not null,
+id_classes int,
+weighting int not null,
+observation varchar(20) not null,
+foreign key (id_classes) references classes(id)
+);
+
+CREATE TABLE attendance(
+id int auto_increment primary key,
+fecha date not null,
+present boolean not null
+);
+
+CREATE TABLE horario(
+id int auto_increment primary key,
+descripcion varchar(25) not null
+);
+
+CREATE TABLE rol(
+id int auto_increment primary key,
+descripcion varchar(25) not null
+);
+
+CREATE TABLE usuario(
+id int auto_increment primary key,
+nombre varchar(20) not null,
+lastname varchar(25) not null,
+adrress varchar (20) not null,
+id_horario int,
+email varchar(30) not null,
+id_rol int,
+foreign key (id_rol) references rol(id),
+foreign key (id_horario) references horario(id)
+);
+
+insert into horario (descripcion) VALUES
+("mañana"),
+("tarde");
+
+insert into rol (descripcion) VALUES 
+("student"),
+("teacher");
